@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+
+<h1>Registered Businesses</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var business in Model.Businesses)
+    {
+        <tr>
+            <td>@business.Name</td>
+            <td>@business.Location</td>
+            <td>@business.Category</td>
+        </tr>
+    }
+    </tbody>
+</table>

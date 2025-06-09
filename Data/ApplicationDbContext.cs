@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ChilomoniBusinessDirectory.Models;
 
 namespace ChilomoniBusinessDirectory.Data
 {
@@ -9,5 +10,7 @@ namespace ChilomoniBusinessDirectory.Data
             : base(options)
         {
         }
+          public DbSet<Business> Businesses { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
